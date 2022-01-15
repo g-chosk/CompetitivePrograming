@@ -1,8 +1,9 @@
 W   = input()
-T   = []
+T   = [""]
 while 1:
     t   = input()
-    T.append(t.split())
+    for t_ in t.split():
+        T.append(t_.lower())
     if "END_OF_TEXT" in t:
         break
-print(T)
+print(T.count(W))
